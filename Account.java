@@ -73,4 +73,8 @@ public class Account{
 		balance += plus;
 		return balance;
 	}
+	//print the balance , monthly interest ,and the date when this account create
+	public String toString(){
+		return "id : "+ id + "\nbalance : " + getbalance() + "\nmonthly interest : " + getMonthlyInterest() + "\ndate : " + dateCreated ;
+	}
 }
