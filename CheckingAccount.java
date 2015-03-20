@@ -28,14 +28,15 @@ public class CheckingAccount extends Account{
 		overdraft = 0;
 	}
 	
+	//checking account has an overdraft limit. If exceed overdraft , let user know.
 	@Override
 	public double withdraw(double minus){
-		balance -= minus;
-		if(balance >= -overdraft)
-			return balance;
+	setbalance(getbalance() - minus);
+		if(getbalance() >= -overdraft)
+			return getbalance();
 		else
 			System.out.println("Exceeding overdraft , invalid input");
-			balance += minus; 
-			return balance;
+			setbalance(getbalance() + minus); 
+			return getbalance();
 	}
 }
