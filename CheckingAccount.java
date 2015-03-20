@@ -39,4 +39,9 @@ public class CheckingAccount extends Account{
 			setbalance(getbalance() + minus); 
 			return getbalance();
 	}
+	//print the balance , monthly interest , date ,and the withdrawal limit when this account create
+	@Override
+	public String toString(){
+		return super.toString() + "\nWithdrawal limit : " + (getbalance()+getoverdraft());
+	}
 }
